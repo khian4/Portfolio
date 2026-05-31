@@ -307,8 +307,8 @@ a {
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,6 +330,7 @@ a {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(8px); }
 }
+
 .stats {
     padding: 4rem 2rem;
     background-color: var(--bg-light);
@@ -377,6 +378,7 @@ a {
     font-weight: 500;
     font-size: 0.95rem;
 }
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -394,10 +396,6 @@ a {
     margin-bottom: 0.7rem;
     font-weight: 700;
 }
-
-/* ============================================
-   Scroll-reveal utility
-   ============================================ */
 
 .reveal {
     opacity: 0;
@@ -535,7 +533,6 @@ a {
     color: var(--text-secondary);
     font-size: 0.95rem;
 }
-
 
 .projects-section {
     padding: 4rem 2rem;
@@ -679,8 +676,6 @@ a {
     transform: translateY(0);
 }
 
-
-
 .reflection-section {
     padding: 4rem 2rem;
 }
@@ -728,7 +723,6 @@ a {
     font-size: 1.2rem;
     font-weight: 700;
 }
-
 
 .contact-section {
     padding: 4rem 2rem;
@@ -840,8 +834,6 @@ a {
 .contact-form .btn {
     width: 100%;
 }
-
-
 .footer {
     background-color: var(--bg-light);
     border-top: 1px solid var(--border);
@@ -985,10 +977,6 @@ a {
     transform: rotate(90deg) scale(1.1);
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
-
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -1105,6 +1093,7 @@ a {
     .cta-buttons { gap: 0.8rem; }
     .social-icons { gap: 0.8rem; }
 }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;

@@ -34,20 +34,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
-const socialLinks = {
-    'Facebook': 'https://facebook.com/',
-    'GitHub': '#',
-    'Email': 'mailto:your-email@example.com'
-};
-
-document.querySelectorAll('.social-icon').forEach(link => {
-    const title = link.getAttribute('title');
-    if (socialLinks[title]) {
-        link.href = socialLinks[title];
-    }
-});
-
 function createScrollToTopButton() {
     const button = document.createElement('button');
     button.innerHTML = '↑';
