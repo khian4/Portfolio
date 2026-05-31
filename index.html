@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#reflection" class="nav-link">Reflection</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-section">
+                <div class="profile-image-wrapper">
+                    <img src="images/profile11.png" alt="Khian James J. Yumol" class="profile-image">
+                </div>
+                <h1 class="hero-title">Khian James J. Yumol</h1>
+                <p class="hero-subtitle">3rd Year Student</p>
+                <p class="hero-description">
+                    I like learning how to create basic programs and websites. I'm still improving my tech skills 
+                    In the future, I want to improve and have greater self-assurance as a developer.
+                </p>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Projects</a>
+                <a href="#about" class="btn btn-secondary">Learn More About Me</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">3rd</div>
+                <div class="stat-label">Year Student</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Major Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Passion</div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <h3>Background</h3>
+                <p>
+                    I am a 3rd-year student currently pursuing my degree in information technology. 
+                    My journey into web development started with a curiosity about how websites work, 
+                    and it has evolved into a passion for creating functional and user-friendly applications.
+                </p>
+                <p>
+                    Throughout my academic career, I have consistently focused on understanding the 
+                    fundamentals of web development while staying updated with modern technologies and best practices. 
+                    I believe in learning by doing, and I have completed several hands-on projects that have 
+                    strengthened my technical skills.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="about-content">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">SQL Server</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Non-Technical Skills -->
+            <div class="about-content">
+                <h3>Non-Technical Skills</h3>
+                <div class="soft-skills">
+                    <div class="soft-skill-item">
+                        <h4>Problem Solving</h4>
+                        <p>Ability to break down complex problems and implement effective solutions</p>
+                    </div>
+                    <div class="soft-skill-item">
+                        <h4>Communication</h4>
+                        <p>Clear communication of ideas and technical concepts to a variety of audiences</p>
+                    </div>
+                    <div class="soft-skill-item">
+                        <h4>Collaboration</h4>
+                        <p>Working effectively in team settings and contributing to group projects</p>
+                    </div>
+                    <div class="soft-skill-item">
+                        <h4>Attention to Detail</h4>
+                        <p>Ensure careful attention to user experience and code quality in every project</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Marck's Barbershop Reservation System.</h3>
+                    </div>
+                    
+                    <p class="project-description">
+                        Marck's Barbershop Reservation System is a web-based appointment booking system developed using HTML, CSS, JavaScript, PHP, and SQL Server. 
+                        The system allows customers to conveniently schedule barber appointments online, while helping the barbershop manage reservations, customer records, and appointment schedules efficiently.
+                        It reduces manual scheduling, simplifies the booking process, and enhances customer service in general.
+                    </p>
+
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">SQL Server</span>
+                        </div>
+                    </div>
+
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Online Appointment Booking</li>
+                            <li>Customer Records Management</li>
+                            <li>Contact form with validation</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn-secondary view-project" data-image="images/barbershop.jpg">View</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>LMD Junkshop</h3>
+                    </div>
+                    
+                    <p class="project-description">
+                        LMD Junkshop Management System is a desktop-based application developed using C# to help streamline the daily operations of LMD Junkshop. 
+                        The system manages customer transactions, recyclable material records, pricing, and sales reports in an organized and efficient manner. It reduces manual record-keeping, 
+                        improves transaction accuracy, and provides faster access to business information for better decision-making.
+                    </p>
+
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">C#</span>
+                        </div>
+                    </div>
+
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Transaction Management</li>
+                            <li>Inventory Tracking</li>
+                            <li>Report Generation</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="btn-secondary view-project" data-image="images/junkshop.jpg">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reflection" class="reflection-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning Reflection</h2>
+            </div>
+
+            <article class="reflection-article">
+                <h3>Reflections</h3>
+                <p class="reflection-meta">A reflection on my learning journey</p>
+
+                <div class="reflection-content">
+                    <p>
+                        I have learned new things and gotten practical experience throughout this course. 
+                        that has completely changed the way I think about web development. This has been a difficult road. 
+                        and fulfilling, giving me valuable lessons about hard work, problem-solving, and technical skills. 
+                        and ongoing education.  
+                    </p>
+
+                    <h4>Key Learnings</h4>
+                    <p>
+                        One of the most significant learnings from this course has been understanding the importance of the web development 
+                        fundamentals HTML, CSS, and JavaScript. I thought these were simple technologies, but as I progressed through 
+                        the course, I realized how powerful they are when used effectively. Learning to create responsive designs that work 
+                        seamlessly across different devices taught me the importance of thinking about user experience from the start. 
+                        Additionally, my introduction to backend technologies like PHP and MySQL opened my eyes to the complexity and beauty 
+                        of full-stack web development.
+                    </p>
+
+                    <h4>Overall Insights and Realizations</h4>
+                    <p>
+                        I now understand that being a good developer requires 
+                        constant learning and adaptation, as technologies evolve rapidly. I've learned that clean code, proper documentation, 
+                        and attention to detail are not just best practices but essential for professional development. Most importantly, 
+                        I've realized that the best way to learn is through hands-on practice and building real projects. Every bug encountered 
+                        is a learning opportunity.
+                    </p>
+
+                    <p>
+                        As I move forward, I'm committed to enhancing my skills, exploring new frameworks and tools, and applying these 
+                        learnings to create meaningful digital solutions that positively impact users.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out to me for any inquiries or opportunities</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>
+                            <a href="mailto:khianyumol4@gmail.com">khianyumol4@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p>+63 6633983163</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Quezon City, Philippines</p>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <p>&copy; 2026 Khian James J. Yumol. All rights reserved.</p>
+            </div>
+ 
+            <div class="footer-social">
+                <p class="social-label">Connect with me:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/khian.yumol.54" class="social-icon" title="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/khian4" class="social-icon" title="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:khianyumol4@gmail.com" class="social-icon" title="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Project Image">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

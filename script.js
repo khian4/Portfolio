@@ -1,0 +1,174 @@
+// ============================================
+// Mobile Menu Toggle
+// ============================================
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+hamburger?.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// ============================================
+// Active Navigation Link on Scroll
+// ============================================
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// ============================================
+// Social Media Links
+// ============================================
+
+const socialLinks = {
+    'Facebook': 'https://facebook.com/',
+    'GitHub': '#',
+    'Email': 'mailto:your-email@example.com'
+};
+
+document.querySelectorAll('.social-icon').forEach(link => {
+    const title = link.getAttribute('title');
+    if (socialLinks[title]) {
+        link.href = socialLinks[title];
+    }
+});
+
+// ============================================
+// Scroll to Top Button
+// ============================================
+
+function createScrollToTopButton() {
+    const button = document.createElement('button');
+    button.innerHTML = '↑';
+    button.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 45px;
+        height: 45px;
+        background-color: #ffffff;
+        color: #0a0a0a;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: bold;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        z-index: 999;
+    `;
+
+    document.body.appendChild(button);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            button.style.opacity = '1';
+            button.style.visibility = 'visible';
+        } else {
+            button.style.opacity = '0';
+            button.style.visibility = 'hidden';
+        }
+    });
+
+    button.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    button.addEventListener('mouseenter', () => {
+        button.style.backgroundColor = '#e0e0e0';
+    });
+
+    button.addEventListener('mouseleave', () => {
+        button.style.backgroundColor = '#ffffff';
+    });
+}
+
+createScrollToTopButton();
+
+// ============================================
+// Contact Form Handling
+// ============================================
+
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Simple validation
+        if (name && email && message) {
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Reset form
+            contactForm.reset();
+        }
+    });
+}
+
+// ============================================
+// Project Modal Functionality
+// ============================================
+
+const projectModal = document.getElementById('projectModal');
+const modalClose = document.querySelector('.modal-close');
+const modalImage = document.getElementById('modalImage');
+const viewProjectButtons = document.querySelectorAll('.view-project');
+
+// Open modal when View Demo is clicked
+viewProjectButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const imageUrl = button.getAttribute('data-image');
+        modalImage.src = imageUrl;
+        projectModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+projectModal.addEventListener('click', (e) => {
+    if (e.target === projectModal) {
+        projectModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+        projectModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
