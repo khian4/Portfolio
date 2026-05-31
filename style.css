@@ -38,11 +38,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-/* ============================================
-   Navbar
-   ============================================ */
-
 .navbar {
     position: sticky;
     top: 0;
@@ -147,10 +142,6 @@ a {
 .hamburger.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
-
-/* ============================================
-   Hero
-   ============================================ */
 
 .hero {
     min-height: 90vh;
@@ -339,11 +330,6 @@ a {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(8px); }
 }
-
-/* ============================================
-   Stats
-   ============================================ */
-
 .stats {
     padding: 4rem 2rem;
     background-color: var(--bg-light);
@@ -391,11 +377,6 @@ a {
     font-weight: 500;
     font-size: 0.95rem;
 }
-
-/* ============================================
-   Container & Section Header
-   ============================================ */
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -435,10 +416,6 @@ a {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
-
-/* ============================================
-   About
-   ============================================ */
 
 .about-section {
     padding: 4rem 2rem;
@@ -559,9 +536,6 @@ a {
     font-size: 0.95rem;
 }
 
-/* ============================================
-   Projects
-   ============================================ */
 
 .projects-section {
     padding: 4rem 2rem;
@@ -705,9 +679,7 @@ a {
     transform: translateY(0);
 }
 
-/* ============================================
-   Reflection
-   ============================================ */
+
 
 .reflection-section {
     padding: 4rem 2rem;
@@ -757,9 +729,6 @@ a {
     font-weight: 700;
 }
 
-/* ============================================
-   Contact
-   ============================================ */
 
 .contact-section {
     padding: 4rem 2rem;
@@ -872,9 +841,6 @@ a {
     width: 100%;
 }
 
-/* ============================================
-   Footer
-   ============================================ */
 
 .footer {
     background-color: var(--bg-light);
@@ -946,10 +912,6 @@ a {
     width: 22px;
     height: 22px;
 }
-
-/* ============================================
-   Project Modal
-   ============================================ */
 
 .project-modal {
     display: none;

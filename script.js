@@ -1,7 +1,3 @@
-// ============================================
-// Mobile Menu Toggle
-// ============================================
-
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -16,9 +12,6 @@ navLinks.forEach(link => {
     });
 });
 
-// ============================================
-// Active Navigation Link on Scroll
-// ============================================
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -41,9 +34,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ============================================
-// Social Media Links
-// ============================================
 
 const socialLinks = {
     'Facebook': 'https://facebook.com/',
@@ -57,10 +47,6 @@ document.querySelectorAll('.social-icon').forEach(link => {
         link.href = socialLinks[title];
     }
 });
-
-// ============================================
-// Scroll to Top Button
-// ============================================
 
 function createScrollToTopButton() {
     const button = document.createElement('button');
@@ -114,41 +100,31 @@ function createScrollToTopButton() {
 
 createScrollToTopButton();
 
-// ============================================
-// Contact Form Handling
-// ============================================
-
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         
-        // Simple validation
+
         if (name && email && message) {
-            // Show success message
             alert('Thank you for your message! I will get back to you soon.');
             
-            // Reset form
+
             contactForm.reset();
         }
     });
 }
-
-// ============================================
-// Project Modal Functionality
-// ============================================
 
 const projectModal = document.getElementById('projectModal');
 const modalClose = document.querySelector('.modal-close');
 const modalImage = document.getElementById('modalImage');
 const viewProjectButtons = document.querySelectorAll('.view-project');
 
-// Open modal when View Demo is clicked
 viewProjectButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
